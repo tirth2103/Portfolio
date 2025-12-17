@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Button } from './ui/button';
-import { Linkedin, Mail, Terminal, Network } from 'lucide-react';
+import { Linkedin, Mail, Terminal, Network, Download } from 'lucide-react';
 import { portfolioData } from '../data/mock';
 
 const Hero = () => {
