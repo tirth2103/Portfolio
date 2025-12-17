@@ -59,7 +59,7 @@ const Skills = () => {
             root@portfolio:~$ ls -la /skills
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-white font-mono">
-            <span className="text-[#00ff41]">{'> '}</span>Technical Arsenal
+            <span className="text-[#00ff41]">{'> '}</span>Technical Skills
           </h2>
         </div>
 
