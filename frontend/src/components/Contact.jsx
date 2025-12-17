@@ -5,6 +5,10 @@ import { Textarea } from './ui/textarea';
 import { Terminal, Send, Mail, Linkedin, CheckCircle, AlertCircle } from 'lucide-react';
 import { portfolioData } from '../data/mock';
 import { toast } from '../hooks/use-toast';
+import axios from 'axios';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const Contact = () => {
   const [formData, setFormData] = useState({
