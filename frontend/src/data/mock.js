@@ -73,7 +73,11 @@ export const portfolioData = {
       duration: "October 2023 - March 2024",
       location: "Ahmedabad, Gujarat, India",
       description: "Process management and coordination in a professional IT services environment.",
-      responsibilities: []
+      responsibilities: [
+        "Worked as Process Associate for 6 months with main responsibilities in Microsoft Excel, computer skills and filling out insurance forms",
+        "Handled add-on urgent forms and audited new employees work",
+        "Managed patient data for a dental clinic accurately, including insurance coverage, treatment plans, and financial expenses"
+      ]
     },
     {
       id: 4,
