@@ -30,28 +30,30 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Mock submission for now
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      // Send to backend API
+      const response = await axios.post(`${API}/contact`, formData);
       
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-        duration: 5000,
-      });
+      if (response.data.success) {
+        toast({
+          title: "Message Sent!",
+          description: response.data.message || "Thank you for reaching out. I'll get back to you soon.",
+          duration: 5000,
+        });
 
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      }
     } catch (error) {
+      console.error('Contact form error:', error);
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again.",
+        description: error.response?.data?.detail || "Failed to send message. Please try again.",
         variant: "destructive",
         duration: 5000,
       });
