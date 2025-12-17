@@ -95,46 +95,59 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
-      title: "Multi-Site Server Infrastructure",
-      description: "Designed and deployed a multi-site server infrastructure connecting multiple locations with VPN tunnels, centralized Active Directory, and remote monitoring systems.",
-      technologies: ["Windows Server", "Linux", "VPN", "Active Directory", "Zabbix"],
+      title: "Enterprise Virtual Infrastructure Implementation (LA & Singapore)",
+      duration: "May 2025 - Aug 2025",
+      description: "Designed and deployed enterprise-grade virtual infrastructure across worldwide offices in Los Angeles and Singapore with integrated security, monitoring, and collaboration solutions.",
+      technologies: ["Windows Server 2019", "Linux Server", "MySQL", "Nextcloud", "Wazuh", "Zabbix", "Gitea", "Redmine", "Microsoft Exchange", "Headwind MDM", "VPN"],
       highlights: [
-        "Configured secure VPN connections between sites",
-        "Implemented centralized user authentication",
-        "Set up real-time monitoring with Zabbix"
+        "Authorized domain controllers (NetcoreX.local) of two foreign sites and assisted safe VPN connectivity between sites",
+        "Introduced enterprise applications: Nextcloud (collaboration), Wazuh (security), Zabbix (monitoring), Gitea (repository), Redmine (ticketing), Exchange (mail), MySQL (database) and Headwind MDM",
+        "Authenticated all tools at LDAP/ADDS for centralized identity management",
+        "Developed containerized applications using Docker for controlled, portable and rapid provisioning",
+        "Ensured security hardening, monitoring alerts and system health verification across both environments"
       ]
     },
     {
       id: 2,
-      title: "Security Monitoring & SIEM Implementation",
-      description: "Implemented Wazuh SIEM solution for security monitoring, log analysis, and threat detection across network infrastructure.",
-      technologies: ["Wazuh", "Linux", "Security Control", "Log Analysis"],
+      title: "Apache Guacamole Remote Access Platform via Reverse Proxy & Load Balancing",
+      duration: "Jan 2025 - Apr 2025",
+      description: "Deployed high-availability Apache Guacamole remote access infrastructure with reverse proxy and load balancing for seamless failover and enterprise-grade remote desktop capabilities.",
+      technologies: ["Guacamole 1.5.5", "Ubuntu Server", "Rocky Linux", "MySQL", "Tomcat 9", "Apache 2", "Active Directory", "LDAP", "RDP/VNC"],
       highlights: [
-        "Deployed Wazuh agents across infrastructure",
-        "Configured custom security rules and alerts",
-        "Implemented automated incident response workflows"
+        "Installed Guacamole servers on Ubuntu and CentOS/Rocky Linux with compilation of source, dependencies and guacd service configuration",
+        "Configured Tomcat9 to execute Guacamole web client with MySQL backend for persistent authentication",
+        "Integrated Guacamole with Active Directory via LDAP for domain authentication and access control",
+        "Configured RDP connections to Windows servers and clients with access to sessions across both Guacamole nodes",
+        "Implemented Apache reverse proxy and load balancer ensuring failover between Node 1 and Node 2",
+        "Reconfigured IP addressing, DNS changes, and reverse-proxy settings for full operational capability with new subnet configuration"
       ]
     },
     {
       id: 3,
-      title: "Cloud Collaboration Platform",
-      description: "Deployed Nextcloud as a private cloud collaboration solution with secure remote access capabilities using Apache Guacamole.",
-      technologies: ["Nextcloud", "Apache Guacamole", "Docker", "MySQL"],
+      title: "Nextcloud Authentication with Active Directory and LDAP",
+      duration: "Jan 2025 - Apr 2025",
+      description: "Implemented secure cloud collaboration platform with enterprise authentication, cross-platform support, and centralized identity management.",
+      technologies: ["Ubuntu Server", "Red Hat Linux", "Apache", "MariaDB", "OpenLDAP", "Active Directory", "RDP"],
       highlights: [
-        "Containerized deployment using Docker",
-        "Integrated remote desktop access via Guacamole",
-        "Configured MySQL backend for data persistence"
+        "Installed Nextcloud on Ubuntu Server and integrated with Windows Domain Controller",
+        "Configured Apache, PHP and MariaDB for secured web access and database control",
+        "Added Ubuntu and Windows client machines to AD for cross-platform authentication testing",
+        "Enabled Remote Desktop Protocol (RDP) connections for remote administration and verification",
+        "Implemented authenticated user access, file sharing and secure data transfer between clients"
       ]
     },
     {
       id: 4,
-      title: "Network Monitoring Dashboard",
-      description: "Built comprehensive network monitoring solution using Zabbix to track server health, network performance, and system resources.",
-      technologies: ["Zabbix", "Linux", "MySQL", "Network Monitoring"],
+      title: "Disaster Planning Multi-Domain on a Global Scale",
+      duration: "Sep 2024 - Dec 2024",
+      description: "Architected and deployed enterprise disaster recovery infrastructure with multi-domain trust relationships, comprehensive backup policies, and global-scale replication.",
+      technologies: ["Windows Server 2019", "Active Directory", "DNS", "DHCP", "Group Policy", "File Servers", "Print Servers", "VMware vSphere"],
       highlights: [
-        "Configured SNMP monitoring for network devices",
-        "Created custom dashboards for real-time visibility",
-        "Set up alerting and notification systems"
+        "Deployed dedicated domain (core.local) through Windows Server with ADDS, DNS and static IP configuration",
+        "Organized organizational units, groups, users, disk partitions, file shares and mapped drives",
+        "Configured conditional forwarders and cross-domain trust associations for multi-site communication",
+        "Applied Group Policies (home page protection, LAN access limits) and tested replication throughout domain",
+        "Implemented disaster recovery strategy with centralized backup drives and network backup policy"
       ]
     }
   ],
