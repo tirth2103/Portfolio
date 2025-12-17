@@ -151,9 +151,9 @@ const Hero = () => {
           </Button>
           <Button
             onClick={() => window.open('/resume.pdf', '_blank')}
-            className="bg-transparent border-2 border-[#ff6b35] text-[#ff6b35] hover:bg-[#ff6b35]/10 font-mono font-bold px-8 py-6 text-lg rounded-lg shadow-[0_0_30px_rgba(255,107,53,0.2)] hover:shadow-[0_0_40px_rgba(255,107,53,0.4)] transition-all duration-300"
+            className="bg-transparent border-2 border-orange-500 text-orange-500 hover:bg-orange-500/10 font-mono font-bold px-8 py-6 text-lg rounded-lg shadow-[0_0_30px_rgba(255,107,0,0.2)] hover:shadow-[0_0_40px_rgba(255,107,0,0.4)] transition-all duration-300"
           >
-            <Terminal className="mr-2 w-5 h-5" />
+            <Download className="mr-2 w-5 h-5" />
             Download Resume
           </Button>
           <Button
