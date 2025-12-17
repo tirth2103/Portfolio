@@ -171,9 +171,9 @@ export const portfolioData = {
     {
       id: 3,
       institution: "Tripada High School",
-      degree: "Bachelor of Technology - BTech",
-      field: "Computer/Information Technology Administration and Management",
-      duration: "March 2020 - May 2023",
+      degree: "High School Diploma",
+      field: "Secondary Education",
+      duration: "June 2006 - March 2018",
       location: "India"
     }
   ]
