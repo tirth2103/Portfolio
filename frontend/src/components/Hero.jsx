@@ -179,14 +179,14 @@ const Hero = () => {
             Get In Touch
           </Button>
           <Button
-            onClick={() => window.open('/resume.pdf', '_blank')}
+            onClick={handleResumeDownload}
             className="bg-transparent border-2 border-orange-500 text-orange-500 hover:bg-orange-500/10 font-mono font-bold px-8 py-6 text-lg rounded-lg shadow-[0_0_30px_rgba(255,107,0,0.2)] hover:shadow-[0_0_40px_rgba(255,107,0,0.4)] transition-all duration-300"
           >
             <Download className="mr-2 w-5 h-5" />
             Download Resume
           </Button>
           <Button
-            onClick={() => window.open(portfolioData.personal.linkedin, '_blank')}
+            onClick={handleLinkedInClick}
             className="bg-transparent border-2 border-[#00d9ff] text-[#00d9ff] hover:bg-[#00d9ff]/10 font-mono font-bold px-8 py-6 text-lg rounded-lg shadow-[0_0_30px_rgba(0,217,255,0.2)] hover:shadow-[0_0_40px_rgba(0,217,255,0.4)] transition-all duration-300"
           >
             <Linkedin className="mr-2 w-5 h-5" />
