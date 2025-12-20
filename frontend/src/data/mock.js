@@ -96,7 +96,7 @@ export const portfolioData = {
     {
       id: 1,
       title: "Enterprise Virtual Infrastructure Implementation (LA & Singapore)",
-      duration: "May 2025 - Aug 2025",
+      duration: "May 2025 - August 2025",
       description: "Designed and deployed enterprise-grade virtual infrastructure across worldwide offices in Los Angeles and Singapore with integrated security, monitoring, and collaboration solutions.",
       technologies: ["Windows Server 2019", "Linux Server", "MySQL", "Nextcloud", "Wazuh", "Zabbix", "Gitea", "Redmine", "Microsoft Exchange", "Headwind MDM", "VPN"],
       highlights: [
@@ -110,7 +110,7 @@ export const portfolioData = {
     {
       id: 2,
       title: "Apache Guacamole Remote Access Platform via Reverse Proxy & Load Balancing",
-      duration: "Jan 2025 - Apr 2025",
+      duration: "January 2025 - April 2025",
       description: "Deployed high-availability Apache Guacamole remote access infrastructure with reverse proxy and load balancing for seamless failover and enterprise-grade remote desktop capabilities.",
       technologies: ["Guacamole 1.5.5", "Ubuntu Server", "Rocky Linux", "MySQL", "Tomcat 9", "Apache 2", "Active Directory", "LDAP", "RDP/VNC"],
       highlights: [
@@ -125,7 +125,7 @@ export const portfolioData = {
     {
       id: 3,
       title: "Nextcloud Authentication with Active Directory and LDAP",
-      duration: "Jan 2025 - Apr 2025",
+      duration: "January 2025 - April 2025",
       description: "Implemented secure cloud collaboration platform with enterprise authentication, cross-platform support, and centralized identity management.",
       technologies: ["Ubuntu Server", "Red Hat Linux", "Apache", "MariaDB", "OpenLDAP", "Active Directory", "RDP"],
       highlights: [
@@ -139,7 +139,7 @@ export const portfolioData = {
     {
       id: 4,
       title: "Disaster Planning Multi-Domain on a Global Scale",
-      duration: "Sep 2024 - Dec 2024",
+      duration: "September 2024 - December 2024",
       description: "Architected and deployed enterprise disaster recovery infrastructure with multi-domain trust relationships, comprehensive backup policies, and global-scale replication.",
       technologies: ["Windows Server 2019", "Active Directory", "DNS", "DHCP", "Group Policy", "File Servers", "Print Servers", "VMware vSphere"],
       highlights: [
