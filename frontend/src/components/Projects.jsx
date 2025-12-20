@@ -50,9 +50,15 @@ const Projects = () => {
               {/* Content */}
               <div className="p-6">
                 {/* Project title */}
-                <h3 className="text-xl font-bold text-white font-mono mb-3 group-hover:text-[#00ff41] transition-colors duration-300">
+                <h3 className="text-xl font-bold text-white font-mono mb-2 group-hover:text-[#00ff41] transition-colors duration-300">
                   {project.title}
                 </h3>
+
+                {/* Duration */}
+                <p className="text-[#00d9ff] font-mono text-xs mb-3 flex items-center gap-2">
+                  <span className="text-gray-500">⏱</span>
+                  {project.duration}
+                </p>
 
                 {/* Description */}
                 <p className="text-gray-400 text-sm mb-4 leading-relaxed">
