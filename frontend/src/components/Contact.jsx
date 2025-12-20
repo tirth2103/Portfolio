@@ -35,6 +35,14 @@ const Contact = () => {
       const response = await axios.post(`${API}/contact`, formData);
       
       if (response.data.success) {
+        // Track successful contact form submission in Google Analytics
+        if (window.gtag) {
+          window.gtag('event', 'form_submit', {
+            event_category: 'contact',
+            event_label: 'Contact Form Submission'
+          });
+        }
+
         toast({
           title: "Message Sent!",
           description: response.data.message || "Thank you for reaching out. I'll get back to you soon.",
