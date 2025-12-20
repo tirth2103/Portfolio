@@ -41,7 +41,7 @@ export const portfolioData = {
       id: 1,
       company: "Amazon DSP",
       role: "Warehouse Associate",
-      duration: "September 2024 - Present",
+      duration: "September 2025 - Present",
       location: "St Thomas, Ontario, Canada",
       description: "Engaged in a fast-paced, highly organized operational setting requiring accuracy, productivity, and teamwork.",
       responsibilities: [
@@ -56,7 +56,7 @@ export const portfolioData = {
       id: 2,
       company: "Swiss Chalet",
       role: "Line Cook",
-      duration: "February 2024 - Present",
+      duration: "February 2025 - Present",
       location: "Cambridge, Ontario, Canada",
       description: "Committed to quality and working in a fast-paced environment.",
       responsibilities: [
