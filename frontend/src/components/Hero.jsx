@@ -82,7 +82,36 @@ const Hero = () => {
   }, []);
 
   const scrollToContact = () => {
+    // Track event in Google Analytics
+    if (window.gtag) {
+      window.gtag('event', 'click', {
+        event_category: 'engagement',
+        event_label: 'Get In Touch Button'
+      });
+    }
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleResumeDownload = () => {
+    // Track event in Google Analytics
+    if (window.gtag) {
+      window.gtag('event', 'download', {
+        event_category: 'resume',
+        event_label: 'Resume Download'
+      });
+    }
+    window.open('/resume.pdf', '_blank');
+  };
+
+  const handleLinkedInClick = () => {
+    // Track event in Google Analytics
+    if (window.gtag) {
+      window.gtag('event', 'click', {
+        event_category: 'social',
+        event_label: 'LinkedIn Profile'
+      });
+    }
+    window.open(portfolioData.personal.linkedin, '_blank');
   };
 
   return (
