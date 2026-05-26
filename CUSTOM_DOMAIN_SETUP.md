@@ -66,7 +66,7 @@ If you need help with custom domain configuration on the Emergent side:
 
 ## Current URLs
 
-- **Preview URL:** https://hireme-dev.preview.emergentagent.com/
+- **Preview URL:** https://hack-portfolio-5.preview.emergentagent.com/
 - **Custom Domain (once configured):** https://tirthc.in
 
 ## Your DNS Records (Reference)

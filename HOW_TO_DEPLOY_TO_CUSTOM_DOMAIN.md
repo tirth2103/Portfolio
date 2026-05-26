@@ -66,7 +66,7 @@ In Emergent dashboard:
 After deploying, verify:
 
 1. **Emergent Dashboard** - Shows "Deployed" status
-2. **Preview URL** - https://hireme-dev.preview.emergentagent.com/
+2. **Preview URL** - https://hack-portfolio-5.preview.emergentagent.com/
 3. **Custom Domain** - https://www.tirthc.in
 
 All three should show the same updated content.

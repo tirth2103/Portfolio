@@ -79,11 +79,11 @@ If you still see old content after trying all the above:
 
 1. **Wait 15-30 minutes** - CDN/server cache might need time to clear
 2. **Check on different device** - Try your phone with mobile data (not WiFi)
-3. **Check the preview URL** - If https://hireme-dev.preview.emergentagent.com/ shows changes, the issue is definitely cache
+3. **Check the preview URL** - If https://hack-portfolio-5.preview.emergentagent.com/ shows changes, the issue is definitely cache
 
 ## Current Versions
 
-- **Preview URL** (Always latest): https://hireme-dev.preview.emergentagent.com/
+- **Preview URL** (Always latest): https://hack-portfolio-5.preview.emergentagent.com/
 - **Custom Domain**: https://www.tirthc.in (may take time to update due to cache)
 
 ---

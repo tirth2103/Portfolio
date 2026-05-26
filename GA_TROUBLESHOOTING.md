@@ -170,7 +170,7 @@ After deploying, verify:
 ## Still Not Working?
 
 ### Quick Test: Check Preview URL
-1. Visit: https://hireme-dev.preview.emergentagent.com/
+1. Visit: https://hack-portfolio-5.preview.emergentagent.com/
 2. Open browser console (F12)
 3. Type: `typeof gtag`
 4. If it says `"function"` - code is correct, just need to deploy to tirthc.in

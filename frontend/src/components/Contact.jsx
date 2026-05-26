@@ -5,10 +5,9 @@ import { Textarea } from './ui/textarea';
 import { Terminal, Send, Mail, Linkedin, CheckCircle, AlertCircle } from 'lucide-react';
 import { portfolioData } from '../data/mock';
 import { toast } from '../hooks/use-toast';
-import axios from 'axios';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+const WEB3FORMS_ACCESS_KEY = '64c06f19-8715-4adb-9d52-5e01725fca36';
+const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -31,21 +30,34 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Send to backend API
-      const response = await axios.post(`${API}/contact`, formData);
-      
-      if (response.data.success) {
+      // Send directly to Web3Forms using FormData (avoids CORS preflight)
+      const formPayload = new FormData();
+      formPayload.append('access_key', WEB3FORMS_ACCESS_KEY);
+      formPayload.append('name', formData.name);
+      formPayload.append('email', formData.email);
+      formPayload.append('subject', formData.subject);
+      formPayload.append('message', formData.message);
+      formPayload.append('from_name', 'Portfolio Contact Form');
+
+      const response = await fetch(WEB3FORMS_ENDPOINT, {
+        method: 'POST',
+        body: formPayload,
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
         // Track successful contact form submission in Google Analytics
         if (window.gtag) {
           window.gtag('event', 'form_submit', {
             event_category: 'contact',
-            event_label: 'Contact Form Submission'
+            event_label: 'Contact Form Submission',
           });
         }
 
         toast({
-          title: "Message Sent!",
-          description: response.data.message || "Thank you for reaching out. I'll get back to you soon.",
+          title: 'Message Sent!',
+          description: "Thank you for reaching out. I'll get back to you soon.",
           duration: 5000,
         });
 
@@ -54,15 +66,17 @@ const Contact = () => {
           name: '',
           email: '',
           subject: '',
-          message: ''
+          message: '',
         });
+      } else {
+        throw new Error(result.message || 'Submission failed');
       }
     } catch (error) {
       console.error('Contact form error:', error);
       toast({
-        title: "Error",
-        description: error.response?.data?.detail || "Failed to send message. Please try again.",
-        variant: "destructive",
+        title: 'Error',
+        description: error.message || 'Failed to send message. Please try again.',
+        variant: 'destructive',
         duration: 5000,
       });
     } finally {
